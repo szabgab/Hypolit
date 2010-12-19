@@ -1,2 +1,12 @@
 Hypolit is an experimental web application to learn how to use PerlDancer.
 
+
+Plan:
+
+The first part I am planning to create is a bookmark repository where 
+I can save my bookmarks and share with the public some of them.
+
+It will also have an API and I am going to implement a set of client libraries.
+That will be useful for both testing and for people to integrate it into other
+applications.
+
