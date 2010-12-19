@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use Test::More;
 
-my @protected = qw(/bookmarks/add);
+my @protected = qw(/bookmarks/add /bookmarks/delete /bookmarks/list /dashboard);
 plan tests => 2 + 2 * @protected;
 
 # the order is important

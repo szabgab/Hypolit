@@ -11,4 +11,17 @@ get '/bookmarks/add' => sub {
     send_error("Not logged in", 401);
 };
 
+get '/bookmarks/delete' => sub {
+    send_error("Not logged in", 401);
+};
+
+
+get '/bookmarks/list' => sub {
+    send_error("Not logged in", 401);
+};
+
+get '/dashboard' => sub {
+    send_error("Not logged in", 401);
+};
+
 true;
