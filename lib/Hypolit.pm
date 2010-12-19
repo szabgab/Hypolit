@@ -7,4 +7,8 @@ get '/' => sub {
     template 'index';
 };
 
+get '/bookmarks/add' => sub {
+    send_error("Not logged in", 401);
+};
+
 true;
