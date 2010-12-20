@@ -8,6 +8,7 @@ plan tests => 2 + 2 * @protected + 5;
 # the order is important
 use Hypolit;
 use Dancer::Test;
+Dancer::set log => 'warning';
 
 route_exists [GET => '/'], 'a route handler is defined for /';
 response_status_is ['GET' => '/'], 200, 'response status is 200 for /';
