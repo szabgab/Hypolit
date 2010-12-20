@@ -24,4 +24,10 @@ get '/dashboard' => sub {
     send_error("Not logged in", 401);
 };
 
+get '/login' => sub {
+    template 'login', {
+        'missing_username' => 1,
+    };
+};
+
 true;
