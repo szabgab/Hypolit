@@ -25,8 +25,21 @@ get '/dashboard' => sub {
 };
 
 get '/login' => sub {
+    my $param;
+    if (not params->{'username'}) {
+        $param = 'missing_username';
+    } elsif (not params->{'password'}) {
+        $param = 'missing_password';
+    } elsif ( params->{'username'} ne $ENV{HYPOLIT_USERNAME} 
+         or params->{'password'} ne $ENV{HYPOLIT_PASSWORD} ){
+        $param = 'invalid_data';
+#die 42;
+    } else {
+        $param = 'success';
+    }
+#warn $param;
     template 'login', {
-        'missing_username' => 1,
+        $param => 1,
     };
 };
 

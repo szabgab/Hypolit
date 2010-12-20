@@ -1,3 +1,17 @@
 <% IF missing_username %>
 Missing username
 <% END %>
+
+<% IF missing_password %>
+Missing password
+<% END %>
+
+<% IF invalid_data %>
+Invalid username or password
+<% END %>
+
+<% IF success %>
+Succes. You are now logged in.
+<% END %>
+
+Empty
